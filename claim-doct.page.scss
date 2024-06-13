@@ -1,0 +1,90 @@
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 196, 9);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 196, 9);
+  }
+
+  .options{
+    width: max-content;
+ 
+   }
+ 
+   .group{
+     margin-left: -16px;
+   }
+  
+   
+   ion-accordion.accordion-expanding,
+   ion-accordion.accordion-expanded {
+     width: calc(100% - 32px);
+   
+     margin: 16px auto;
+   
+   }
+   
+   ion-accordion.accordion-collapsing ion-item[slot='header'],
+   ion-accordion.accordion-collapsed ion-item[slot='header'] {
+     --background: var(--ion-color-dark-contrast:);
+     --color: var(--ion-color-light-contrast);
+   }
+   
+   ion-accordion.accordion-expanding ion-item[slot='header'],
+   ion-accordion.accordion-expanded ion-item[slot='header'] {
+     --background: var(  --ion-color-danger-shade);
+     --color: var(--ion-color-primary-contrast);
+    
+   }
+
+   select {
+    width: 100%; /* ou une largeur fixe en pixels/pourcentage */
+    max-width: 300px; /* ajuster la largeur maximale selon vos besoins */
+  }
+
+   .choix{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+ 
+   }
+
+   .descrip{
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-color: darkgrey;
+    margin-right: 30px;
+   }
+
+  ion-textarea {
+    width: 100%; /* ou une largeur fixe en pixels/pourcentage */
+    max-width: 300px; /* ajuster la largeur maximale selon vos besoins */
+    height: 170px;
+    margin-left: 55px;
+  }
+
+  .types{
+    margin-left: 55px;
+    margin-top: 83px;
+  }
+
+  h1{
+    color: var(--ion-color-tertiary-shade);
+    padding-top: 40px;
+  }
+
+  footer{
+    padding-top: 165px;
+  }
+
+  footer{
+    padding-bottom: 15px;
+  }
+  .envoi{
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right:50px ;
+  }

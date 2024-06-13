@@ -1,0 +1,104 @@
+<ion-app>
+
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="danger">
+          <ion-title>Navigation</ion-title>
+          
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+  
+        <ion-list>
+  
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label (click)="goToProfilPage()">Mon profil</ion-label>
+          </ion-item>
+  
+          <ion-item>
+            
+            <ion-accordion-group class="group">
+              <ion-accordion >
+                <ion-item slot="header">
+                  <ion-icon name="list-outline" slot="start"></ion-icon>
+                  <ion-label class="options">Liste d'événements</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content" (click)="goToPasserPage()">Passés</div>
+                <div class="ion-padding" slot="content" (click)="goToVenirPage()">A venir</div>
+              </ion-accordion>
+            </ion-accordion-group>
+  
+          </ion-item>
+         
+  
+          <ion-item>
+            <ion-icon name="card-outline" slot="start"></ion-icon>
+            <ion-label (click)="goToCreditPage()">Crédits</ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-icon name="hand-left-outline" slot="start"></ion-icon>
+            <ion-label (click)="goToPresencePage()">Consultation de présence
+            </ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+            <ion-label>Réclamation</ion-label>
+          </ion-item>
+  
+          <ion-item>
+            <ion-icon name="log-in-outline" slot="start"></ion-icon>
+            <ion-label routerLink="/login">Déconnexion</ion-label>
+          </ion-item>
+  
+        </ion-list>
+        
+      </ion-content>
+  
+    </ion-menu>
+    
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <img src="../../assets/logo_pedoc.jpg" width="50px" height="60px" slot="end">
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+       
+      <div class="claim-content">
+
+        <h1 class="ion-text-center">Réclamation</h1>
+        <h3 class="types">Type:</h3>
+        
+        <div class="choix">
+          
+          <select>
+          <option class="vide">
+          </option>
+          <option _ngcontent-ibq-c190="" value="1: 2000419451" class="ng-star-inserted">Présence</option>
+          <option _ngcontent-ibq-c190="" value="1: 2000419451" class="ng-star-inserted">Autre Observation</option>
+          </select>
+
+        </div>
+                
+        <ion-textarea label="Description" labelPlacement="floating" fill="outline" placeholder="Enter un texte"></ion-textarea>
+<ion-button color="danger" expand="block" class="envoi">Envoyer</ion-button>
+      </div>
+
+
+     
+      </ion-content>
+
+      <footer class="ion-text-center">Copyright &copy; PeDoc 2024, All rights reserved</footer>
+      
+    </div>
+
+    
+</ion-app>
