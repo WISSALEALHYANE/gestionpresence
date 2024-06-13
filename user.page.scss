@@ -1,0 +1,54 @@
+.image-body{
+  background-image: url('../../assets/logo_ministere.jpg');
+  background-repeat: no-repeat;
+ width: 100%;
+}
+
+.image-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.doctorant{
+  max-width: 200px;
+  max-height: 200px;
+ padding-top: 140px;
+ border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.administrateur{
+  max-width: 200px;
+  max-height: 200px;
+  padding-top: 135px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.image-login p{
+  background-color: #cc0000;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.header h2{
+  display: flex;
+  justify-content: center;
+   text-align: center;
+   font-size: small;
+   font-style: italic;
+   padding-top: 40px;
+}
+.header img{
+  height: 70px;
+  width: 70px;
+}
+.bas-page{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-top: 230px;
+}
