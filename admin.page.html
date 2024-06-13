@@ -1,0 +1,175 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Navigation</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+
+        <ion-item>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToProfilAdmPage()">Mon profil</ion-label>
+        </ion-item>
+
+        <ion-item>
+
+          <ion-accordion-group class="group">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-icon name="options-outline" slot="start"></ion-icon>
+                <ion-label class="options">Gestion des comptes </ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" (click)="goToAjoutPage()">Ajouter</div>
+              <div class="ion-padding" slot="content">Modifier</div>
+              <div class="ion-padding" slot="content">Supprimer</div>
+            </ion-accordion>
+          </ion-accordion-group>
+
+        </ion-item>
+
+        <ion-item>
+
+          <ion-accordion-group class="group">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-icon name="list-outline" slot="start"></ion-icon>
+                <ion-label class="options">Liste d'événements</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" (click)="goToPasserPage()">Passés</div>
+              <div class="ion-padding" slot="content" (click)="goToVenirPage()">A venir</div>
+            </ion-accordion>
+          </ion-accordion-group>
+
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="scan-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToScanPage()">Scanner le code QR</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToListPrePage()">Consulter listes de présence</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToReclamPage()">Réclamation</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          <ion-label routerLink="/login">Déconnexion</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <img src="../../assets/logo_pedoc.jpg" width="50px" height="60px" slot="end">
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> <ion-grid>
+      <ion-row>
+        <ion-col size="4" class="profil" (click)="goToProfilAdmPage()">
+          <ion-icon name="person-outline" class="icone"></ion-icon>
+          <p>Mon Profil</p>
+        </ion-col>
+
+        <ion-col size="4" class="evenements">
+
+          <ion-icon name="list-outline" class="icone"></ion-icon>
+           <p id="open-modal" expand="block">Liste d'événements </p>
+
+           <ion-modal #modal trigger="open-modal">
+            <ng-template>
+              <ion-content>
+                <ion-toolbar>
+                  <ion-title class="ion-text-center">Choisir une option</ion-title>
+                </ion-toolbar>
+                <ion-list>
+                  <ion-item lines="none">
+                    <ion-label class="evenement1">
+                      <h1 class="ion-padding" (click)="goToPasserPage()">Evénement passés</h1>
+                    </ion-label>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-label class="evenement2">
+                      <h1 class="ion-padding" (click)="goToVenirPage()">Evénement a venir</h1>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+        
+          
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="scan" (click)="goToScanPage()">
+          <ion-icon name="scan-outline" class="icone"></ion-icon>
+          <p>Scanner le code QR</p>
+        </ion-col>
+        <ion-col size="4" class="presence" (click)="goToListPrePage()">
+          <ion-icon name="clipboard-outline" class="icone"></ion-icon>
+          <p>Liste de présence</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="gerer">
+          <ion-icon name="options-outline" class="compte"></ion-icon>
+          <p id="open-custom-dialog" expand="block">Gérer les comptes doctorants</p>
+               
+          <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+            <ng-template>
+              <div class="wrapper">
+                <ion-toolbar>
+                  <ion-title class="ion-text-center">Choisir une option</ion-title>
+                </ion-toolbar>
+                
+                <ion-list lines="none">
+                  <ion-item  button="true" detail="false" (click)="goToAjoutPage()">
+                    <ion-label  class="ajout">
+                    <h1>Ajouter</h1>
+                  </ion-label>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-label class="modifier">
+                    <h1>Modifier</h1>
+                  </ion-label>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-label class="supprimer">
+                    <h1>Supprimer</h1>
+                  </ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ng-template>
+          </ion-modal>
+        
+        </ion-col>
+
+
+
+        <ion-col size="4" class="reclamation" (click)="goToReclamPage()">
+          <ion-icon name="alert-circle-outline" class="icone"></ion-icon>
+          <p>Réclamation</p>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+    </ion-content>
+  </div>
+</ion-app>
+

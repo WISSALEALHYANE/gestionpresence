@@ -1,0 +1,83 @@
+ion-content {
+    --ion-background-color: transparent;
+}
+
+.frame {
+  color: #d5d5d5;
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  
+}
+
+
+#image{
+    width: 300px;
+    height: 250px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.titre2{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bouton{
+    width: 350px;
+    max-height: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.bas-page{
+    padding-top: 160px;
+}
+
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 196,9);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 196, 9);
+  }
+
+  .options{
+    width: max-content;
+ 
+   }
+ 
+   .group{
+     margin-left: -16px;
+   }
+  
+   
+   ion-accordion.accordion-expanding,
+   ion-accordion.accordion-expanded {
+     width: calc(100% - 32px);
+   
+     margin: 16px auto;
+   
+   }
+   
+   ion-accordion.accordion-collapsing ion-item[slot='header'],
+   ion-accordion.accordion-collapsed ion-item[slot='header'] {
+     --background: var(--ion-color-dark-contrast:);
+     --color: var(--ion-color-light-contrast);
+   }
+   
+   ion-accordion.accordion-expanding ion-item[slot='header'],
+   ion-accordion.accordion-expanded ion-item[slot='header'] {
+     --background: var(  --ion-color-danger-shade);
+     --color: var(--ion-color-primary-contrast);
+    
+   }

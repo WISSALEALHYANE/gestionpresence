@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+ 
+</ion-header>
+
+<ion-content>
+
+<img src="../../assets/logo_pedoc.jpg" width="100px" height="150px" class="pedoc">
+
+  <div class="login-container">
+    <ion-card color="tertiary" [formGroup]="loginForm" >
+      <ion-card-header>
+
+        <ion-card-title>Connectez-vous à votre compte</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       
+          <ion-label position="floating" class="etiquette ">Email : </ion-label>
+          <ion-input type="email" class="saisir" formControlName="email" >
+
+            <ion-icon slot="start" name="mail-outline" aria-hidden="true" class="icone"></ion-icon>
+          </ion-input>
+
+          <div *ngIf="this.loginForm.controls?.['email'].touched && this.loginForm.controls?.['email'].invalid">
+            <ion-text *ngIf="errorControl.email.errors?.required">
+              Email is required
+            </ion-text>
+            <ion-text *ngIf="errorControl.email.errors?.pattern">
+              Email should be valid
+            </ion-text>
+</div>
+        
+        
+          <ion-label position="floating" class="etiquette">Mot de passe: </ion-label>
+          <ion-input type="password" class="saisir" formControlName="password" >
+            <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true" class="icone"></ion-icon>
+          </ion-input>
+
+
+          
+          <a href="#" class="oublier">Mot de passe oublié?</a>
+        <ion-button expand="full" (click)="login()" color="warning">Se connecter</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

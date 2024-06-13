@@ -1,0 +1,57 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  margin-top: -125px;
+}
+
+ion-card {
+  width: 90%;
+  max-width: 400px;
+}
+
+ion-button {
+  margin-top: 20px;
+  color: white;
+  
+}
+.saisir{
+  border: solid;
+  background-color: white;
+  color: black;
+  margin-bottom: 20px;
+}
+.etiquette{
+ font-size: large;
+ font-style: oblique;
+}
+
+
+
+ion-card-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.oublier{
+  text-decoration: none;
+  font-size: large;
+  color: var(--ion-color-tertiary-tint);
+}
+
+.pedoc{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 147px;
+}
+
+.icone{
+  background-image: url('../../assets/couleur.jpg');
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  color:white;
+}

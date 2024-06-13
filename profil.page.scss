@@ -1,0 +1,71 @@
+.info{
+  font-size: large;
+  color: black;
+}
+
+.personne{
+  color: var(--ion-color-tertiary-shade);
+}
+
+.myfile{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-picture-frame {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-left: 120px;
+}
+
+
+.options{
+  width: max-content;
+
+ }
+
+ .group{
+   margin-left: -16px;
+ }
+
+ 
+ ion-accordion.accordion-expanding,
+ ion-accordion.accordion-expanded {
+   width: calc(100% - 32px);
+ 
+   margin: 16px auto;
+ 
+ }
+ 
+ ion-accordion.accordion-collapsing ion-item[slot='header'],
+ ion-accordion.accordion-collapsed ion-item[slot='header'] {
+   --background: var(--ion-color-dark-contrast:);
+   --color: var(--ion-color-light-contrast);
+ }
+ 
+ ion-accordion.accordion-expanding ion-item[slot='header'],
+ ion-accordion.accordion-expanded ion-item[slot='header'] {
+   --background: var(  --ion-color-danger-shade);
+   --color: var(--ion-color-primary-contrast);
+  
+ }
+
+ .profile-picture {
+  width: 150px;
+  height: 150px;
+//  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-picture-frame {
+  position: relative;
+  display: inline-block;
+}

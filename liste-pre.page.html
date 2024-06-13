@@ -1,0 +1,279 @@
+<ion-app>
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Navigation</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+
+        <ion-item>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToProfilAdmPage()">Mon profil</ion-label>
+        </ion-item>
+
+        <ion-item>
+
+          <ion-accordion-group class="group">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-icon name="options-outline" slot="start"></ion-icon>
+                <ion-label class="options">Gestion des comptes </ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" (click)="goToAjoutPage()">Ajouter</div>
+              <div class="ion-padding" slot="content">Modifier</div>
+              <div class="ion-padding" slot="content">Supprimer</div>
+            </ion-accordion>
+          </ion-accordion-group>
+
+        </ion-item>
+
+        <ion-item>
+
+          <ion-accordion-group class="group">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-icon name="list-outline" slot="start"></ion-icon>
+                <ion-label class="options">Liste d'événements</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" (click)="goToPasserPage()">Passés</div>
+              <div class="ion-padding" slot="content" (click)="goToVenirPage()">A venir</div>
+            </ion-accordion>
+          </ion-accordion-group>
+
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="scan-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToScanPage()">Scanner le code QR</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="clipboard-outline" slot="start"></ion-icon>
+          <ion-label>Consulter listes de présence</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToReclamPage()">Réclamation</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          <ion-label routerLink="/login">Déconnexion</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <img src="../../assets/logo_pedoc.jpg" width="50px" height="60px" slot="end">
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content>
+
+  <style>
+    th, td {
+      width: 105px; /* Changer la valeur de largeur selon vos besoins */
+      text-align: center; /* Pour centrer le texte dans les cellules */
+      padding: 5px;
+    }
+  </style>
+
+  <div class="titre3">
+    <h3 class="ion-text-center">La liste de présence</h3>
+  </div>
+
+  <table border="1" class ="tableaux">
+    <thead class="titres">
+      <tr  class="format">
+        <th >
+          <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;" >Nom</font>
+          </font>
+  </th>
+  <th>
+          <font style="vertical-align: inherit;" >
+          <font style="vertical-align: inherit;">Prénom</font>
+          </font>
+    
+  </th>
+  <th >
+          <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">CIN</font>
+          </font>
+  </th>
+  <th >
+    <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">Assiduité</font>
+    </font>
+  </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">ALHYANE</font>
+            </font>
+      </td>
+      <td >
+        <code>Wissale</code>
+      </td>
+      <td>
+        <code>BE12876</code>
+      </td>
+      <td>
+        <code>Absente</code>
+      </td>
+    </tr>
+  
+    <tr>
+      <td>
+             <font style="vertical-align: inherit;">
+             <font style="vertical-align: inherit;">HARCHA</font>
+             </font>
+      </td>
+  
+      <td >
+        <code>Dounia</code>
+      </td>
+      <td>
+        <code>FA32456</code>
+      </td>
+      <td>
+        <code>Présente</code>
+      </td>
+    </tr>
+  
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">TOUIL</font>
+            </font>
+      </td>
+  
+      <td >
+        <code>Achraf</code>
+      </td>
+      <td>
+        <code>WR18025</code>
+      </td>
+      <td>
+        <code>Présent</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">IDRISSI</font>
+            </font>
+      </td>
+  
+      <td >
+        <code>Omar</code>
+      </td>
+      <td>
+        <code>EL15298</code>
+      </td>
+      <td>
+        <code>Absent</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">KHALLOUKI</font>
+            </font>
+      </td>
+  
+      <td >
+        <code>Hajar</code>
+      </td>
+      <td>
+        <code>KL23178</code>
+      </td>
+      <td>
+        <code>Présente</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">DACHRY</font>
+            </font>
+      </td>
+  
+      <td >
+        <code>Wafaa</code>
+      </td>
+      <td>
+        <code>JF72345</code>
+      </td>
+      <td>
+        <code>Présente</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">TARIQ</font>
+            </font>
+      </td>
+  
+      <td >
+        <code>Ziad</code>
+      </td>
+      <td>
+        <code>ZQ87192</code>
+      </td>
+      <td>
+        <code>Absent</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"></font>
+            </font>
+      </td>
+  
+      <td >
+        <code></code>
+      </td>
+      <td>
+        <code></code>
+      </td>
+      <td>
+        <code></code>
+      </td>
+    </tr>
+  
+  
+  
+  
+  </tbody>
+  
+  
+  </table>
+
+</ion-content>
+
+    <footer class="ion-text-center">Copyright &copy; PeDoc 2024, All rights reserved.</footer>
+  </div>
+</ion-app>

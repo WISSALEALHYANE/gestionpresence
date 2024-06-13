@@ -1,0 +1,64 @@
+.format{
+    background-color: rgb(228, 21, 14);
+    color: white;
+}
+.icon{
+    color: Red;
+    font-size: 25px;
+}
+
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 196, 9);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 196, 9);
+  }
+
+  ion-accordion {
+    margin: 0 auto;
+   
+  }
+
+  .options{
+   width: max-content;
+
+  }
+
+  .group{
+    margin-left: -16px;
+  }
+ 
+  
+  ion-accordion.accordion-expanding,
+  ion-accordion.accordion-expanded {
+    width: calc(100% - 32px);
+  
+    margin: 16px auto;
+  
+  }
+  
+  ion-accordion.accordion-collapsing ion-item[slot='header'],
+  ion-accordion.accordion-collapsed ion-item[slot='header'] {
+    --background: var(--ion-color-dark-contrast:);
+    --color: var(--ion-color-light-contrast);
+  }
+  
+  ion-accordion.accordion-expanding ion-item[slot='header'],
+  ion-accordion.accordion-expanded ion-item[slot='header'] {
+    --background: var(  --ion-color-danger-shade);
+    --color: var(--ion-color-primary-contrast);
+   
+  }
+
+  .titre-nmb{
+    padding-top: 35px;
+    padding-bottom: 30px;
+
+  }
+
+  footer{
+    padding-bottom: 15px;
+  }

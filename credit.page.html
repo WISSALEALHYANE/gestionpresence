@@ -1,0 +1,270 @@
+<ion-app>
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Navigation</ion-title>
+        
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-list>
+
+        <ion-item>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToProfilPage()">Mon profil</ion-label>
+        </ion-item>
+
+        <ion-item>
+          
+          <ion-accordion-group class="group">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-icon name="list-outline" slot="start"></ion-icon>
+                <ion-label class="options">Liste d'événements</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" (click)="goToPasserPage()">Passés</div>
+              <div class="ion-padding" slot="content" (click)="goToVenirPage()">A venir</div>
+            </ion-accordion>
+          </ion-accordion-group>
+
+        </ion-item>
+       
+
+        <ion-item>
+          <ion-icon name="card-outline" slot="start"></ion-icon>
+          <ion-label>Crédits</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="hand-left-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToPresencePage()">Consultation de présence
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+          <ion-label (click)="goToReclamPage()">Réclamation</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          <ion-label routerLink="/login">Déconnexion</ion-label>
+        </ion-item>
+
+      </ion-list>
+      
+    </ion-content>
+
+  </ion-menu>
+  
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <img src="../../assets/logo_pedoc.jpg" width="50px" height="60px" slot="end">
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content>
+
+  <style>
+    th, td {
+      width: 75px; /* Changer la valeur de largeur selon vos besoins */
+      text-align: center; /* Pour centrer le texte dans les cellules */
+    }
+  </style>
+
+  <div class="titre-nmb">
+    <h3 class="ion-text-center">Le nombre de crédits des heures</h3>
+  </div>
+  
+  <table border="1" class ="tableau">
+    <thead>
+      <tr  class="format">
+        <th >
+          <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;" >Formation</font>
+    </font>
+    
+    
+  </th>
+  <th>
+    <font style="vertical-align: inherit;" >
+      <font style="vertical-align: inherit;">Date de formation</font>
+    </font>
+    
+  </th>
+  <th >
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Nombre d'heures</font>
+    </font>
+  </th>
+  <th >
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Nombre de crédits</font>
+    </font>
+  </th>
+  <th >
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+  </th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Insertion professionnelle</font>
+        </font>
+      </td>
+      <td >
+        <code>02/01/2024</code>
+      </td>
+      <td>
+        <code>100h</code>
+      </td>
+      <td >
+        <code>10</code>
+      </td>
+      <td>
+        <code> 
+          <ion-icon  name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon>
+          </code>
+      </td>
+      
+    </tr>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Ateliers thématiques</font>
+        </font>
+      </td>
+      <td>
+        <code>03/01/2024</code>
+      </td>
+      <td>
+        <code>30h</code>
+      </td>
+      <td>
+        <code>3</code>
+      </td>
+      <td>
+        <code><ion-icon name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Méthodologie de la recherche</font>
+        </font>
+      </td>
+      <td>
+        <code>10/01/2024</code>
+      </td>
+      <td>
+        <code>40h</code>
+      </td>
+      <td>
+        <code>4</code>
+      </td>
+      <td>
+        <code><ion-icon name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon></code>
+      </td>
+   
+    </tr>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Communication scientifique</font>
+        </font>
+      </td>
+      <td>
+        <code>19/01/2024</code>
+      </td>
+      <td>
+        <code>20h</code>
+      </td>
+      <td>
+        <code>2</code>
+      </td>
+      <td>
+        <code><ion-icon name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon></code>
+      </td>
+     
+    </tr>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Introduction à la recherche interdisciplinaire</font>
+        </font>
+      </td>
+      <td>
+        <code>21/01/2024</code>
+      </td>
+      <td>
+        <code>20h</code>
+      </td>
+      <td>
+        <code>2</code>
+      </td>
+      <td>
+        <code><ion-icon name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon></code>
+      </td>
+     
+    </tr>
+    <tr>
+      <td>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Analyse de données</font>
+        </font>
+      </td>
+      <td>
+        <code>24/01/2024</code>
+      </td>
+      <td>
+        <code>30h</code>
+      </td>
+      <td>
+        <code>3</code>
+      </td>
+      <td>
+        <code><ion-icon name="information-circle-outline" class="icon" (click)="onClick()"></ion-icon></code>
+      </td>
+     
+    </tr>
+    <tr>
+    <th>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+      </th>
+      <td>
+        <code></code>
+      </td>
+      <td>
+        <code></code>
+      </td>
+      <td>
+      
+          <code>Total de crédits: 24</code>
+        </td>
+        <td>
+          <code></code>
+        </td>
+       
+     
+    </tr>
+  </tbody>
+  
+  </table>
+
+
+</ion-content>
+<footer class="ion-text-center">Copyright &copy; PeDoc 2024, All rights reserved</footer>
+  </div>
+</ion-app>
