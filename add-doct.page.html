@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar  color="danger">
+    <ion-title class="ion-text-center" id="new">Nouveau Compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<ion-list class="liste">
+   
+          <ion-label position="stacked">Nom</ion-label>
+          <ion-input type="text" class="entrer" [(ngModel)]="doct.nom"></ion-input>
+       
+        
+          <ion-label >Prénom</ion-label>
+          <ion-input type="text" class="entrer" [(ngModel)]="doct.prenom"></ion-input>
+        
+
+          <ion-label >CIN</ion-label>
+          <ion-input type="text" class="entrer" [(ngModel)]="doct.cin"></ion-input>
+       
+
+      
+          <ion-label >Email</ion-label>
+          <ion-input type="email" class="entrer" [(ngModel)]="doct.email"></ion-input>
+       
+
+        
+          <ion-label >Mot de passe</ion-label>
+          <ion-input type="password" class="entrer" [(ngModel)]="doct.modpass"></ion-input>
+       
+         </ion-list>
+
+         <ion-button color="tertiary" (click)="saveDoct()">Enregistrer</ion-button>
+         <ion-button  color="warning" class="cancel" [routerLink]="['/ajouter']">Annuler</ion-button>
+ 
+</ion-content>
